@@ -4,6 +4,7 @@ datetime <- strptime(paste(subsetData$Date, subsetData$Time, sep=" "), "%d/%m/%Y
 subsetMetering1 <- as.numeric(subsetData$Sub_metering_1)
 subsetMetering2 <- as.numeric(subsetData$Sub_metering_2)
 subsetMetering3 <- as.numeric(subsetData$Sub_metering_3)
+
 png("plot3.png", width=480, height=480)
 plot(datetime,subsetMetering1, type="l",ylab="Energy Submetering", xlab="")
 lines(datetime, subsetMetering2, type="l", col="red")
